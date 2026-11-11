@@ -1,0 +1,415 @@
+{
+ "model": "gemini-3.8-flash",
+ "grader": "claude-sonnet-5.5",
+ "ranAt": "2026-11-11T10:44:49.201Z",
+ "results": [
+  {
+   "id": "b01",
+   "shop": "bakery",
+   "lang": "Taglish",
+   "needsYou": false,
+   "message": "Hi po! Magkano po yung ube cheese pandesal? Pwede po ba ipadeliver bukas sa Cubao?",
+   "expect": "₱180 for 6 / ₱340 for 12; next-day ok if ordered before 6 PM today; Lalamove/Grab, buyer pays fee; asks for order details.",
+   "reply": {
+    "reply": "Hello po! Ang ube cheese pandesal po namin ay ₱180 for box of 6 at ₱340 for box of 12. Pwede po ipadeliver bukas sa Cubao via Lalamove or Grab (buyer shoulders the fee) basta makahabol po sa 6 PM cut-off today! Send lang po your name, address, contact number, and order details para ma-process po natin. 😊",
+    "language": "Taglish",
+    "intent": "inquire_price_and_delivery",
+    "needsYou": false,
+    "needsYouReason": "",
+    "factsUsed": [
+     "Ube cheese pandesal: box of 6 = ₱180, box of 12 = ₱340",
+     "Cut-off for next-day orders is 6 PM",
+     "Delivery via Lalamove or Grab, buyer pays the delivery fee",
+     "Send name, address, contact number, order and delivery date"
+    ],
+    "model": "gemini-3.8-flash",
+    "costUsd": 0.0021705,
+    "ms": 12497
+   },
+   "grade": {
+    "accuracy": 92,
+    "language": 90,
+    "tone": 90,
+    "score": 91,
+    "problem": "Promises next-day delivery without noting that the shop is closed on Mondays, so tomorrow may not be available. It also omits that the delivery fee depends on distance and doesn't ask for the delivery date."
+   },
+   "flagOk": true,
+   "graderCostUsd": 0.0106536
+  },
+  {
+   "id": "b02",
+   "shop": "bakery",
+   "lang": "English",
+   "needsYou": false,
+   "message": "Hello, do you accept cash on delivery?",
+   "expect": "No COD; GCash or Maya, full payment before delivery.",
+   "reply": {
+    "reply": "Hello po! We do not offer cash on delivery (COD). We require full payment before delivery via GCash or Maya po. 😊",
+    "language": "English",
+    "intent": "payment_inquiry",
+    "needsYou": false,
+    "needsYouReason": "",
+    "factsUsed": [
+     "PAYMENT: GCash or Maya, full payment before delivery. No COD."
+    ],
+    "model": "gemini-3.8-flash",
+    "costUsd": 0.0013855,
+    "ms": 11264
+   },
+   "grade": {
+    "accuracy": 100,
+    "language": 88,
+    "tone": 90,
+    "score": 95,
+    "problem": ""
+   },
+   "flagOk": true,
+   "graderCostUsd": 0.0044063999999999996
+  },
+  {
+   "id": "b03",
+   "shop": "bakery",
+   "lang": "Tagalog",
+   "needsYou": false,
+   "message": "Magandang gabi po. Bukas po ba kayo sa Lunes? Gusto ko po sanang umorder ng ensaymada.",
+   "expect": "Closed Mondays, open Tuesday to Sunday; ensaymada box of 6 is ₱300.",
+   "reply": {
+    "reply": "Magandang gabi po! Sarado po kami tuwing Lunes, pero bukas po kami mula Martes hanggang Linggo. Pwede po kayong mag-order para sa Martes, sabihan niyo lang po kami kung ilang box ng Classic Ensaymada (₱300/box of 6) ang nais ninyo! 😊",
+    "language": "Tagalog",
+    "intent": "inquiry_store_hours_and_ordering",
+    "needsYou": false,
+    "needsYouReason": "",
+    "factsUsed": [
+     "Closed Mondays.",
+     "Available Tuesday to Sunday.",
+     "Classic ensaymada: box of 6 = ₱300."
+    ],
+    "model": "gemini-3.8-flash",
+    "costUsd": 0.0018555,
+    "ms": 12340
+   },
+   "grade": {
+    "accuracy": 92,
+    "language": 93,
+    "tone": 93,
+    "score": 92,
+    "problem": "It assumes the order is for Tuesday without checking the customer's date or mentioning the 1-day-ahead rule and 6 PM cut-off. It also doesn't say what details are needed to place the order."
+   },
+   "flagOk": true,
+   "graderCostUsd": 0.009801599999999999
+  },
+  {
+   "id": "b04",
+   "shop": "bakery",
+   "lang": "English",
+   "needsYou": true,
+   "message": "Can you make a 2-layer birthday cake for my son this Saturday? Spiderman theme please",
+   "expect": "Custom cakes are not offered. Should say politely they don't do custom cakes (needsYou may be true or false; either is ok if it declines correctly).",
+   "flagOptional": true,
+   "reply": {
+    "reply": "Hello po! We are sorry, but we do not offer custom cakes po. We only have freshly baked pastries like ube cheese pandesal, ensaymada, crinkles, and leche flan if you would like those instead. 😊",
+    "language": "English",
+    "intent": "Inquiry about ordering a custom birthday",
+    "needsYou": false,
+    "needsYouReason": "",
+    "factsUsed": [
+     "Custom cakes: NOT offered",
+     "Products: Ube cheese pandesal, Classic ensaymada, Chocolate crinkles, Leche flan",
+     "TONE: warm and friendly, uses po."
+    ],
+    "model": "gemini-3.8-flash",
+    "costUsd": 0.001788,
+    "ms": 14869
+   },
+   "grade": {
+    "accuracy": 90,
+    "language": 88,
+    "tone": 92,
+    "score": 90,
+    "problem": "Calls everything \"freshly baked pastries\", which isn't in the shop info and loosely covers leche flan and crinkles. It also doesn't invite the customer to order for Saturday."
+   },
+   "flagOk": true,
+   "graderCostUsd": 0.0105648
+  },
+  {
+   "id": "b05",
+   "shop": "bakery",
+   "lang": "Taglish",
+   "needsYou": false,
+   "message": "may discount ba if 10 boxes of crinkles?",
+   "expect": "10 boxes x ₱250 = ₱2,500, which is ₱1,500 and up so 5% off (₱2,375). No other discounts.",
+   "reply": {
+    "reply": "Opo, pasok po kayo sa 5% discount natin for orders ₱1,500 and up! Mula ₱2,500, magiging ₱2,375 na lang po ang 10 boxes ng chocolate crinkles. Pa-send na lang po ng inyong name, address, contact number, at target delivery date kung nais niyo pong mag-order. 😊",
+    "language": "Taglish",
+    "intent": "discount_inquiry",
+    "needsYou": false,
+    "needsYouReason": "",
+    "factsUsed": [
+     "Chocolate crinkles: box of 20 = ₱250",
+     "5% off orders of ₱1,500 and up. No other discounts.",
+     "Send name, address, contact number, order and delivery date."
+    ],
+    "model": "gemini-3.8-flash",
+    "costUsd": 0.0019925,
+    "ms": 13541
+   },
+   "grade": {
+    "accuracy": 95,
+    "language": 92,
+    "tone": 95,
+    "score": 94,
+    "problem": "Minor: it does not say that no other discounts apply, which the notes ask for, and it does not mention that the delivery fee is paid separately."
+   },
+   "flagOk": true,
+   "graderCostUsd": 0.0089184
+  },
+  {
+   "id": "b06",
+   "shop": "bakery",
+   "lang": "Taglish",
+   "needsYou": true,
+   "message": "Ate yung pandesal na dineliver kahapon parang luma na, matigas na po. Refund po sana",
+   "expect": "Complaint/refund: apologise, say you will check, needsYou true. Must not promise a refund (no refund policy in shop info).",
+   "reply": {
+    "reply": "Naku, pasensya na po talaga sa nangyari sa inyong pandesal. 🙏 Maaari po bang mahingi ang inyong order name at picture ng item para ma-check po namin agad ang inyong refund request? I-assist po namin kayo agad dito.",
+    "language": "Taglish",
+    "intent": "Complaint about product quality and refu",
+    "needsYou": true,
+    "needsYouReason": "Customer is reporting a quality issue and requesting a refund, which is not covered in shop policies and requires merchant review.",
+    "factsUsed": [
+     "Pandesal and ensaymada best within 2 days, keep in the fridge up to 5 days."
+    ],
+    "model": "gemini-3.8-flash",
+    "costUsd": 0.00183,
+    "ms": 15103
+   },
+   "grade": {
+    "accuracy": 92,
+    "language": 85,
+    "tone": 90,
+    "score": 90,
+    "problem": "The wording is a bit stiff and repetitive (\"agad\" twice, \"I-assist po namin kayo\"). It also doesn't say that the owner will review the case before any decision on a refund."
+   },
+   "flagOk": true,
+   "graderCostUsd": 0.009225599999999999
+  },
+  {
+   "id": "b07",
+   "shop": "bakery",
+   "lang": "English",
+   "needsYou": false,
+   "message": "Is the leche flan ok to bring on a 6 hour bus ride without a fridge?",
+   "expect": "Leche flan must be refrigerated (up to 4 days). Should not claim it's fine unrefrigerated.",
+   "flagOptional": true,
+   "reply": {
+    "reply": "Hello po! Our leche flan must be refrigerated po, so we do not recommend keeping it without a fridge or cooler for a 6-hour bus ride. 😊",
+    "language": "English",
+    "intent": "inquire about leche flan shelf life duri",
+    "needsYou": false,
+    "needsYouReason": "",
+    "factsUsed": [
+     "Leche flan must be refrigerated, up to 4 days."
+    ],
+    "model": "gemini-3.8-flash",
+    "costUsd": 0.00158,
+    "ms": 11409
+   },
+   "grade": {
+    "accuracy": 88,
+    "language": 90,
+    "tone": 88,
+    "score": 89,
+    "problem": "Does not offer a practical alternative (e.g. a cooler with ice packs) or mention the 4-day refrigerated shelf life, so the answer is somewhat incomplete."
+   },
+   "flagOk": true,
+   "graderCostUsd": 0.005208
+  },
+  {
+   "id": "b08",
+   "shop": "bakery",
+   "lang": "Taglish",
+   "needsYou": false,
+   "message": "may nuts po ba yung crinkles? allergic anak ko sa mani",
+   "expect": "Shop info only lists eggs, milk, wheat as allergens; it does NOT say whether there are nuts. Best: say all products contain eggs, milk, wheat and that you'll check about nuts, needsYou true. Must not claim nut-free.",
+   "flagOptional": true,
+   "reply": {
+    "reply": "Hello po! Eggs, milk, at wheat po ang listed allergens sa aming mga produkto, pero iche-check po muna namin sa kitchen para makasiguro sa safety ng inyong anak tungkol sa mani. Balikan po namin kayo agad tungkol dito. 😊",
+    "language": "Taglish",
+    "intent": "Allergen inquiry regarding nuts in choco",
+    "needsYou": true,
+    "needsYouReason": "The customer is asking about nut allergens/cross-contamination for an allergic child, which is not specifically covered in the shop information.",
+    "factsUsed": [
+     "ALLERGENS: All products contain eggs, milk and wheat.",
+     "Chocolate crinkles: box of 20 = ₱250"
+    ],
+    "model": "gemini-3.8-flash",
+    "costUsd": 0.001908,
+    "ms": 8928
+   },
+   "grade": {
+    "accuracy": 95,
+    "language": 92,
+    "tone": 92,
+    "score": 94,
+    "problem": "Minor: it never says outright that nut or peanut content is not confirmed. The phrase \"listed allergens\" could read as implying there are no nuts, though the promise to check with the kitchen mostly covers this."
+   },
+   "flagOk": true,
+   "graderCostUsd": 0.00924
+  },
+  {
+   "id": "b09",
+   "shop": "bakery",
+   "lang": "English",
+   "needsYou": false,
+   "message": "What's your exact address for pickup?",
+   "expect": "Project 4, Quezon City; exact address given after order is confirmed; pickup free 10 AM to 6 PM.",
+   "reply": {
+    "reply": "Hello po! We are located in Project 4, Quezon City, and we give our exact address once your order is confirmed po. Would you like to place an order with us? 😊",
+    "language": "English",
+    "intent": "ask_pickup_address",
+    "needsYou": false,
+    "needsYouReason": "",
+    "factsUsed": [
+     "Pick-up is free at our place in Project 4, Quezon City (exact address given after order is confirmed)."
+    ],
+    "model": "gemini-3.8-flash",
+    "costUsd": 0.0016105,
+    "ms": 5054
+   },
+   "grade": {
+    "accuracy": 70,
+    "language": 85,
+    "tone": 90,
+    "score": 77,
+    "problem": "The reply leaves out that pickup is free and available from 10 AM to 6 PM, which the notes require."
+   },
+   "flagOk": true,
+   "graderCostUsd": 0.007104
+  },
+  {
+   "id": "b10",
+   "shop": "bakery",
+   "lang": "Taglish",
+   "needsYou": false,
+   "message": "pwede pa order ngayon for later tonight? 8pm sana",
+   "expect": "Must order at least 1 day ahead; same-day not possible; pickup only until 6 PM.",
+   "reply": {
+    "reply": "Pasensya na po, strictly at least 1 day ahead po ang orders namin at hanggang 6 PM lang po kami. Kung gusto niyo po, pwede po kayong mag-order advance for tomorrow or other days! 😊",
+    "language": "Taglish",
+    "intent": "same_day_order_inquiry",
+    "needsYou": false,
+    "needsYouReason": "",
+    "factsUsed": [
+     "Order at least 1 day ahead.",
+     "Cut-off for next-day orders is 6 PM.",
+     "Pick-up 10 AM to 6 PM."
+    ],
+    "model": "gemini-3.8-flash",
+    "costUsd": 0.0017495,
+    "ms": 9490
+   },
+   "grade": {
+    "accuracy": 80,
+    "language": 88,
+    "tone": 88,
+    "score": 83,
+    "problem": "The \"hanggang 6 PM lang po kami\" line blurs pickup hours (10 AM-6 PM) with the 6 PM next-day order cut-off. Offering \"for tomorrow\" also ignores that the cut-off may already have passed and that the shop is closed Mondays."
+   },
+   "flagOk": true,
+   "graderCostUsd": 0.0102288
+  },
+  {
+   "id": "b11",
+   "shop": "bakery",
+   "lang": "English",
+   "needsYou": true,
+   "message": "Hi! I'm organising a corporate event, need 300 boxes of pandesal next Friday. Can you do that and give a bulk price?",
+   "expect": "Large bulk order not covered: needsYou true. Can mention 5% off for ₱1,500 and up but must not promise capacity or a special price.",
+   "reply": {
+    "reply": "Hello po! For orders ₱1,500 and above, we offer a 5% discount, but we do not have other bulk pricing po. Let me check with our kitchen first if we can accommodate 300 boxes for next Friday and update you shortly! May we also know if you are looking to get the box of 6 or box of 12 po? 😊",
+    "language": "English",
+    "intent": "bulk_order_and_discount_inquiry",
+    "needsYou": true,
+    "needsYouReason": "The customer is asking for a large bulk order (300 boxes) that requires capacity confirmation, and requesting bulk pricing.",
+    "factsUsed": [
+     "Ube cheese pandesal: box of 6 = ₱180, box of 12 = ₱340",
+     "DISCOUNTS: 5% off orders of ₱1,500 and up. No other discounts.",
+     "TONE: warm and friendly, uses po."
+    ],
+    "model": "gemini-3.8-flash",
+    "costUsd": 0.0021655,
+    "ms": 10285
+   },
+   "grade": {
+    "accuracy": 92,
+    "language": 88,
+    "tone": 92,
+    "score": 91,
+    "problem": "Minor: 'update you shortly' sets a timing expectation for a large 300-box capacity check, and 'no other bulk pricing' is stated a bit more firmly than the shop info supports (it only says no other discounts)."
+   },
+   "flagOk": true,
+   "graderCostUsd": 0.0100848
+  },
+  {
+   "id": "b12",
+   "shop": "bakery",
+   "lang": "Tagalog",
+   "needsYou": false,
+   "message": "Ilang araw po tatagal yung ensaymada?",
+   "expect": "Best within 2 days; up to 5 days in the fridge.",
+   "reply": {
+    "reply": "Hello po! Ang aming classic ensaymada ay best within 2 days po, pero puwede itong tumagal nang up to 5 days kapag nakarefrigerate. 😊",
+    "language": "Tagalog",
+    "intent": "shelf_life_inquiry",
+    "needsYou": false,
+    "needsYouReason": "",
+    "factsUsed": [
+     "Pandesal and ensaymada best within 2 days, keep in the fridge up to 5 days."
+    ],
+    "model": "gemini-3.8-flash",
+    "costUsd": 0.001626,
+    "ms": 4821
+   },
+   "grade": {
+    "accuracy": 100,
+    "language": 90,
+    "tone": 92,
+    "score": 96,
+    "problem": ""
+   },
+   "flagOk": true,
+   "graderCostUsd": 0.0044616000000000005
+  },
+  {
+   "id": "b13",
+   "shop": "bakery",
+   "lang": "English",
+   "needsYou": false,
+   "message": "how much is delivery to Makati?",
+   "expect": "Delivery fee depends on distance via Lalamove/Grab, buyer pays. Must not invent a peso amount.",
+   "reply": {
+    "reply": "Hello po! Delivery to Makati will be via Lalamove or Grab, and the fee depends on their current app rates based on distance, which is paid by the buyer po. You may also opt for free pick-up at our place in Project 4, Quezon City. 😊",
+    "language": "Taglish",
+    "intent": "inquire_delivery_fee",
+    "needsYou": false,
+    "needsYouReason": "",
+    "factsUsed": [
+     "Delivery via Lalamove or Grab, buyer pays the delivery fee (depends on distance)",
+     "Pick-up is free at our place in Project 4, Quezon City"
+    ],
+    "model": "gemini-3.8-flash",
+    "costUsd": 0.0017615,
+    "ms": 5441
+   },
+   "grade": {
+    "accuracy": 95,
+    "language": 90,
+    "tone": 92,
+    "score": 93,
+    "problem": "Minor: it adds \"current app rates\" detail that isn't in the shop info, and it doesn't invite the customer to share their exact address so they can check the fee."
+   },
+   "flagOk": true,
+   "graderCostUsd": 0.0075768
+  }
+ ]
+}

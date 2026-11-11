@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seller Reply Helper</title>
+<meta name="description" content="Ready-to-send replies for small online sellers, in English, Tagalog, Taglish or Singlish, written from your own price list. Flags the messages that need you.">
+<meta property="og:title" content="Seller Reply Helper">
+<meta property="og:description" content="Stop typing the same answers all day. Replies in English, Tagalog, Taglish or Singlish from your own price list.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23ff6b4a'/%3E%3Cpath d='M8 10h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-9l-5 4v-4H8a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff8f3;--card:#ffffff;--card2:#fff1e8;--text:#24160f;--soft:#5c4a40;--muted:#8a776c;--line:#f1dfd3;--line2:#e7cdbd;--accent:#ff6b4a;--accent2:#ffb238;--accent-ink:#ffffff;--bubble-in:#f1ebe7;--bubble-out:#ff6b4a;--good:#1f9d6b;--good-soft:#e3f6ee;--warn:#c76a00;--warn-soft:#fff1d9;--shadow:0 10px 30px rgba(120,60,20,.08)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17110e;--card:#211915;--card2:#2a201b;--text:#f7ece5;--soft:#d6c4b9;--muted:#a8958a;--line:#3a2c25;--line2:#4b3a31;--bubble-in:#33271f;--good:#4fd6a0;--good-soft:#173328;--warn:#ffb547;--warn-soft:#3a2a12;--shadow:none}}
+:root[data-theme="dark"]{--bg:#17110e;--card:#211915;--card2:#2a201b;--text:#f7ece5;--soft:#d6c4b9;--muted:#a8958a;--line:#3a2c25;--line2:#4b3a31;--bubble-in:#33271f;--good:#4fd6a0;--good-soft:#173328;--warn:#ffb547;--warn-soft:#3a2a12;--shadow:none}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 "Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--text);text-decoration:none}
+.logo i{width:30px;height:30px;border-radius:9px;background:var(--accent);display:grid;place-items:center}
+.nav nav{display:flex;gap:18px;font-size:.92rem}.nav nav a{color:var(--muted);text-decoration:none}.nav nav a:hover{color:var(--text)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:40px 0 56px}
+.kicker{display:inline-block;font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--card2);padding:6px 12px;border-radius:999px}
+h1{font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.05;letter-spacing:-.03em;margin:18px 0 16px;font-weight:800}
+h1 em{font-style:normal;color:var(--accent)}
+.lede{font-size:1.12rem;color:var(--soft);max-width:560px;margin:0 0 24px}
+.langs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.langs span{font-size:.85rem;font-weight:600;border:1px solid var(--line2);border-radius:999px;padding:5px 12px;background:var(--card)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:14px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:700}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}.btn.primary:hover{filter:brightness(1.05)}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line2)}
+.phone{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:18px;box-shadow:var(--shadow)}
+.phone .top{display:flex;align-items:center;gap:10px;padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.ava{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));flex:none}
+.phone .top b{font-size:.95rem}.phone .top small{display:block;color:var(--muted);font-size:.75rem}
+.msg{max-width:82%;padding:10px 14px;border-radius:18px;margin:8px 0;font-size:.93rem;line-height:1.45}
+.msg.in{background:var(--bubble-in);border-bottom-left-radius:6px}
+.msg.out{background:var(--bubble-out);color:#fff;margin-left:auto;border-bottom-right-radius:6px}
+.tag{display:inline-block;font-size:.7rem;font-weight:700;margin:0 0 4px;color:var(--muted)}
+.tag.r{display:block;text-align:right}
+section{padding:56px 0}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);letter-spacing:-.02em;margin:0 0 10px;font-weight:800}
+.sub{color:var(--soft);max-width:640px;margin:0 0 28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow)}
+.try{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+label{display:block;font-weight:700;font-size:.88rem;margin:0 0 6px}
+.hint{font-weight:500;color:var(--muted)}
+select,textarea,input{width:100%;font:inherit;font-size:.93rem;color:var(--text);background:var(--bg);border:1px solid var(--line2);border-radius:14px;padding:10px 12px}
+textarea{resize:vertical}
+#info{min-height:260px;font-size:.85rem;line-height:1.5}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 14px}
+.chip{font:inherit;font-size:.8rem;border:1px solid var(--line2);background:var(--card2);color:var(--text);border-radius:999px;padding:5px 10px;cursor:pointer;text-align:left}
+.chip:hover{border-color:var(--accent)}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+#out{margin-top:16px}
+.result{border:1px solid var(--line);border-radius:18px;padding:16px;background:var(--bg)}
+.result .msg.out{max-width:100%;white-space:pre-wrap}
+.meta{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 0}
+.pill{font-size:.75rem;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--card2);color:var(--soft)}
+.pill.good{background:var(--good-soft);color:var(--good)}.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.flag{margin-top:10px;padding:10px 12px;border-radius:12px;background:var(--warn-soft);color:var(--warn);font-size:.88rem;font-weight:600}
+.facts{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:.83rem}
+.err{color:var(--warn);font-weight:600}
+.spin{display:inline-block;width:16px;height:16px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:s .8s linear infinite}
+@keyframes s{to{transform:rotate(360deg)}}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step .n{width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:800;margin-bottom:10px}
+.step b{display:block;font-size:1.05rem;margin-bottom:4px}.step span{color:var(--soft);font-size:.93rem}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}
+.stat .big{font-size:2.1rem;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stat .lbl{color:var(--muted);font-size:.85rem;line-height:1.35}
+.examples{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.ex .shop{font-size:.75rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.ex .score{float:right;font-weight:800;color:var(--good)}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px}
+.filters button{font:inherit;font-size:.85rem;font-weight:600;border:1px solid var(--line2);background:var(--card);color:var(--soft);border-radius:999px;padding:6px 12px;cursor:pointer}
+.filters button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.price{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.price .card h3{margin:0 0 4px}.price .amt{font-size:2rem;font-weight:800}.price .amt small{font-size:.9rem;color:var(--muted);font-weight:600}
+.price ul{padding-left:18px;color:var(--soft);font-size:.93rem}
+.price .card.hot{border:2px solid var(--accent)}
+.cmp{width:100%;border-collapse:collapse;font-size:.92rem}.cmp th,.cmp td{padding:10px 16px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}.cmp th{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}.cmp td.n{text-align:right;font-variant-numeric:tabular-nums}.cmp tr.win td{font-weight:800;color:var(--accent)}.cmp tr:last-child td{border-bottom:0}
+.faq details{border-bottom:1px solid var(--line);padding:14px 0}.faq summary{font-weight:700;cursor:pointer}.faq p{color:var(--soft);margin:8px 0 0}
+footer{padding:40px 0 60px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
+@media (max-width:860px){.hero,.try,.examples,.price{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.nav nav a.hide{display:none}.hero{padding-top:16px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a class="logo" href="#"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></i>Seller Reply Helper</a>
+    <nav><a href="#try">Try it</a><a class="hide" href="#tested">Tested</a><a href="#pricing">Pricing</a><a class="hide" href="https://github.com/robd-hub/seller-reply-helper">GitHub</a></nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <span class="kicker">For small online sellers</span>
+      <h1>Stop typing <em>"hm po?"</em> answers all day.</h1>
+      <p class="lede">Tell it your prices and policies once. Paste any customer message and get a ready-to-send reply in the customer's own language, using only your facts. Complaints, refunds and anything it doesn't know get flagged for you instead of guessed.</p>
+      <div class="langs"><span>English</span><span>Tagalog</span><span>Taglish</span><span>Singlish</span></div>
+      <div class="row"><a class="btn primary" href="#try">Try it free</a><a class="btn ghost" href="#tested">See the test results</a></div>
+    </div>
+    <div class="phone" aria-label="Example conversation">
+      <div class="top"><div class="ava"></div><div><b>CaseHaus PH</b><small>Messenger</small></div></div>
+      <div class="msg in">hello may stock pa ba kayo ng lilac na case for 17 pro max? cod ba?</div>
+      <span class="tag r">Drafted by Seller Reply Helper</span>
+      <div class="msg out">Hi! Sold out pa po yung lilac for 17 Pro Max until December 😊 Pero may black, sage at cream kami, ₱249. COD available nationwide po!</div>
+      <div class="msg in">sige sage na lang. ilang days sa QC?</div>
+      <div class="msg out">Noted po! Metro Manila 1-3 days, ₱60 shipping. Pa-send lang po ng name, address at contact number 🙌</div>
+    </div>
+  </div>
+</div>
+
+<section id="try" style="background:var(--card2)">
+  <div class="wrap">
+    <h2>Try it with a sample shop, or your own</h2>
+    <p class="sub">Pick a sample shop or write your own shop info, then paste a customer message. It runs live on SERV Reasoning, and a reply costs a small fraction of a cent.</p>
+    <div class="try">
+      <div class="card">
+        <label for="shop">Shop</label>
+        <select id="shop"></select>
+        <div style="height:12px"></div>
+        <label for="info">Shop info <span class="hint">(products, prices, delivery, payment, policies)</span></label>
+        <textarea id="info" spellcheck="false"></textarea>
+      </div>
+      <div class="card">
+        <label for="message">Customer message</label>
+        <textarea id="message" rows="4" placeholder="Paste a message from Messenger, Shopee, Instagram..."></textarea>
+        <div class="chips" id="chips"></div>
+        <div class="row"><button class="btn primary" id="go">Write reply</button><span class="hint" id="status"></span></div>
+        <div id="out"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="sub">No app to install. Built for sellers who answer the same ten questions fifty times a day.</p>
+    <div class="steps">
+      <div class="card step"><div class="n">1</div><b>Describe your shop once</b><span>Paste your price list, delivery fees, payment methods and rules, the same things you'd tell a new helper.</span></div>
+      <div class="card step"><div class="n">2</div><b>Paste a customer message</b><span>From Messenger, Shopee, Lazada, TikTok Shop, Instagram, WhatsApp or Carousell. Any language your buyers use.</span></div>
+      <div class="card step"><div class="n">3</div><b>Copy, check, send</b><span>You get a short reply in their language. If it needs you, like a complaint or something your info doesn't cover, it tells you why.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="tested" style="background:var(--card2)">
+  <div class="wrap">
+    <h2>Tested on <span id="n-tests"></span> real-style customer messages</h2>
+    <p class="sub">Four sample shops (a Quezon City bakery, a phone case shop, an ukay seller and a Singapore kueh kitchen), tricky questions included: totals, sold-out items, allergy questions, angry buyers, haggling and refund requests. A stronger model graded every reply against the shop info.</p>
+    <div class="stats" id="stats"></div>
+    <div class="filters" id="filters"></div>
+    <div class="examples" id="examples"></div>
+    <div class="row" style="justify-content:center;margin-top:18px"><button class="btn ghost" id="more" type="button">Show all replies</button></div>
+    <h3 style="margin:48px 0 6px;font-size:1.3rem">We tried 8 SERV models and picked the best</h3>
+    <p class="sub" style="margin-bottom:16px">Same instructions, same 55 messages, same grader. Gemini 3.8 Flash gave the most accurate replies and the best "needs you" calls for a fraction of a cent each.</p>
+    <div class="card" style="padding:8px 0;overflow-x:auto"><table class="cmp" id="cmp"></table></div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <h2>Simple pricing</h2>
+    <p class="sub">Each reply costs us about <b id="unit-cost"></b> in AI credits, so we can keep it cheap. Pricing is planned for launch. The demo is free now.</p>
+    <div class="price">
+      <div class="card"><h3>Free</h3><div class="amt">₱0</div><ul><li>20 replies a day</li><li>1 shop</li><li>All four languages</li></ul></div>
+      <div class="card hot"><h3>Seller</h3><div class="amt">₱199 <small>/ S$6 a month</small></div><ul><li>Unlimited replies</li><li>Up to 3 shops</li><li>"Needs you" inbox for flagged messages</li></ul></div>
+      <div class="card"><h3>Coming next</h3><div class="amt" style="font-size:1.3rem;padding:8px 0">Auto-drafts</div><ul><li>Drafts appear inside Messenger and Instagram</li><li>Shopee and Lazada chat</li><li>Learns from replies you edit</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap faq">
+    <h2>Questions</h2>
+    <details><summary>Will it make up prices or promises?</summary><p>It's told to use only your shop info. When the info doesn't cover something, it writes a polite "let me check" reply and flags the message for you. Every test reply was graded for made-up facts.</p></details>
+    <details><summary>Does it send messages by itself?</summary><p>No. You copy the reply and send it yourself, so you always see it first. Auto-drafts inside Messenger are next on the list, and you'll still press send.</p></details>
+    <details><summary>Which languages?</summary><p>It replies in the language and style the customer used: English, Tagalog, Taglish or Singlish. It uses "po" when the customer does.</p></details>
+    <details><summary>What runs it?</summary><p>SERV Reasoning from OpenServ. We tested several models and picked the one with the best mix of accuracy and price for this job.</p></details>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer>
+    Seller Reply Helper · runs on <a href="https://openserv.ai">SERV Reasoning</a> · built for the OpenServ SERV Hackathon 02 · <a href="https://github.com/robd-hub/seller-reply-helper">source on GitHub</a>
+  </footer>
+</div>
+
+<script>
+var SHOPS = __SHOPS__;
+var RESULTS = __RESULTS__;
+var MODELS = __MODELS__;
+var API = __API__;
+</script>
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+  var CUSTOM_KEY = "srh-my-shop";
+  var shopSel = $("shop"), info = $("info"), msg = $("message"), chips = $("chips");
+  SHOPS.forEach(function(s, i){ var o = document.createElement("option"); o.value = i; o.textContent = s.name; shopSel.appendChild(o); });
+  var mine = document.createElement("option"); mine.value = "mine"; mine.textContent = "My own shop"; shopSel.appendChild(mine);
+  function loadMine(){ try { return localStorage.getItem(CUSTOM_KEY) || ""; } catch(e){ return ""; } }
+  function saveMine(v){ try { localStorage.setItem(CUSTOM_KEY, v); } catch(e){} }
+  function pick(){
+    var v = shopSel.value; chips.innerHTML = "";
+    if (v === "mine") {
+      info.value = loadMine() || "SHOP: \nPRODUCTS AND PRICES:\n- \nDELIVERY:\nPAYMENT:\nRETURNS:\nTONE: friendly";
+      msg.value = ""; return;
+    }
+    var s = SHOPS[v]; info.value = s.info; msg.value = s.samples[0];
+    s.samples.forEach(function(t){ var b = document.createElement("button"); b.className = "chip"; b.type = "button"; b.textContent = t.length > 48 ? t.slice(0, 46) + "…" : t; b.title = t; b.onclick = function(){ msg.value = t; msg.focus(); }; chips.appendChild(b); });
+  }
+  shopSel.onchange = pick;
+  info.oninput = function(){ if (shopSel.value === "mine") saveMine(info.value); };
+  pick();
+
+  $("go").onclick = function(){
+    var b = this, st = $("status"), out = $("out");
+    var name = shopSel.value === "mine" ? "My shop" : SHOPS[shopSel.value].name;
+    b.disabled = true; st.innerHTML = '<span class="spin"></span> Writing…'; out.innerHTML = "";
+    fetch(API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ shopName: name, shopInfo: info.value, message: msg.value }) })
+      .then(function(r){ return r.json().then(function(j){ return { ok: r.ok, j: j }; }); })
+      .then(function(x){
+        if (!x.ok) { out.innerHTML = '<p class="err">' + esc(x.j.error || "Something went wrong.") + '</p>'; return; }
+        var r = x.j;
+        var h = '<div class="result"><span class="tag">Reply to send</span><div class="msg out" id="replytext">' + esc(r.reply || "(no reply)") + '</div>';
+        h += '<div class="meta"><span class="pill">' + esc(r.language) + '</span>' + (r.intent ? '<span class="pill">' + esc(r.intent) + '</span>' : "") + (r.needsYou ? '<span class="pill warn">Needs you</span>' : '<span class="pill good">Ready to send</span>') + '<span class="pill">' + (r.ms / 1000).toFixed(1) + ' s · $' + r.costUsd.toFixed(5) + '</span></div>';
+        if (r.needsYou && r.needsYouReason) h += '<div class="flag">⚑ ' + esc(r.needsYouReason) + '</div>';
+        if (r.factsUsed && r.factsUsed.length) h += '<ul class="facts">' + r.factsUsed.map(function(f){ return "<li>" + esc(f) + "</li>"; }).join("") + '</ul>';
+        h += '<div class="row" style="margin-top:12px"><button class="btn ghost" id="copy" type="button">Copy reply</button></div></div>';
+        out.innerHTML = h;
+        $("copy").onclick = function(){ var t = r.reply, c = this; (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function(){ c.textContent = "Copied ✓"; }, function(){ c.textContent = "Select and copy the text above"; }); };
+      })
+      .catch(function(){ out.innerHTML = '<p class="err">Couldn\'t reach the server. Please try again.</p>'; })
+      .then(function(){ b.disabled = false; st.textContent = ""; });
+  };
+
+  // Test results
+  var R = RESULTS;
+  $("n-tests").textContent = R.count;
+  $("unit-cost").textContent = "$" + R.costEach.toFixed(4);
+  $("stats").innerHTML = [
+    [R.avg.toFixed(0) + "/100", "average grade across all " + R.count + " replies"],
+    [R.noInvented + "/" + R.count, "replies with no made-up facts"],
+    [R.flagsRight + "/" + R.flagChecks, "\"needs you\" calls right (complaints, refunds, unknowns)"],
+    ["$" + R.costEach.toFixed(4), "per reply (" + R.model + " on SERV)"]
+  ].map(function(s){ return '<div class="card stat"><div class="big">' + s[0] + '</div><div class="lbl">' + s[1] + '</div></div>'; }).join("");
+  var langs = ["All"].concat(R.langs), cur = "All", all = false;
+  function draw(){
+    var list = R.examples.filter(function(e){ return cur === "All" || e.lang === cur; });
+    $("more").style.display = list.length > 8 && !all ? "" : "none";
+    if (!all) list = list.slice(0, 8);
+    $("examples").innerHTML = list.map(function(e){
+      return '<div class="card ex"><span class="score">' + e.score + '</span><div class="shop">' + esc(e.shop) + ' · ' + esc(e.lang) + '</div><div class="msg in">' + esc(e.message) + '</div><div class="msg out">' + esc(e.reply) + '</div>' + (e.needsYou ? '<div class="flag">⚑ ' + esc(e.needsYouReason || "Needs you") + '</div>' : '') + '</div>';
+    }).join("");
+  }
+  $("filters").innerHTML = langs.map(function(l){ return '<button type="button" data-l="' + l + '"' + (l === cur ? ' class="on"' : '') + '>' + l + '</button>'; }).join("");
+  $("filters").onclick = function(ev){ var l = ev.target.getAttribute("data-l"); if (!l) return; cur = l; Array.prototype.forEach.call(this.children, function(c){ c.className = c.getAttribute("data-l") === cur ? "on" : ""; }); draw(); };
+  $("more").onclick = function(){ all = true; draw(); };
+  draw();
+  $("cmp").innerHTML = '<tr><th>Model on SERV</th><th class="n">Avg grade</th><th class="n">"Needs you" right</th><th class="n">Cost per reply</th></tr>' + MODELS.models.map(function(m){
+    return '<tr' + (m.model === R.model ? ' class="win"' : '') + '><td>' + esc(m.model) + (m.model === R.model ? ' ✓' : '') + '</td><td class="n">' + m.avg.toFixed(1) + '</td><td class="n">' + m.flagsRight + '/' + m.flagChecks + '</td><td class="n">$' + m.costEach.toFixed(5) + '</td></tr>';
+  }).join("");
+})();
+</script>
+</body>
+</html>

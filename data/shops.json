@@ -1,0 +1,26 @@
+[
+  {
+    "id": "bakery",
+    "name": "Tita Nena's Bake Shop",
+    "info": "Home bakery in Quezon City. Orders via Facebook page and Messenger.\n\nPRODUCTS (prices per box):\n- Ube cheese pandesal: box of 6 = ₱180, box of 12 = ₱340\n- Classic ensaymada: box of 6 = ₱300\n- Chocolate crinkles: box of 20 = ₱250\n- Leche flan (llanera): ₱220 each\n- Custom cakes: NOT offered\n\nORDERING: Order at least 1 day ahead. Cut-off for next-day orders is 6 PM. Send name, address, contact number, order and delivery date.\nAVAILABLE: Tuesday to Sunday. Closed Mondays.\nDELIVERY: Via Lalamove or Grab, buyer pays the delivery fee (depends on distance). Pick-up is free at our place in Project 4, Quezon City (exact address given after order is confirmed). Pick-up 10 AM to 6 PM.\nPAYMENT: GCash or Maya, full payment before delivery. No COD.\nDISCOUNTS: 5% off orders of ₱1,500 and up. No other discounts.\nSHELF LIFE: Pandesal and ensaymada best within 2 days, keep in the fridge up to 5 days. Leche flan must be refrigerated, up to 4 days.\nALLERGENS: All products contain eggs, milk and wheat.\nTONE: warm and friendly, uses po.",
+    "starter": "Hi po! Magkano po yung ube cheese pandesal? Pwede po ba ipadeliver bukas sa Cubao?"
+  },
+  {
+    "id": "phone",
+    "name": "CaseHaus PH",
+    "info": "Phone case shop on Shopee and Facebook.\n\nPRODUCTS:\n- Clear MagSafe case: ₱299. Models: iPhone 14, 15, 16, 17 (regular, Plus, Pro, Pro Max). NOT available for Android.\n- Silicone case (colours: black, sage, lilac, cream): ₱249. Models: iPhone 13 to 17, Samsung Galaxy S24 and S25 (regular and Ultra only).\n- Tempered glass screen protector: ₱149, same models as silicone cases.\n- Bundle: any case + screen protector = ₱20 off.\n\nSTOCK: Lilac for iPhone 17 Pro Max is sold out until December. Everything else in stock.\nSHIPPING: Metro Manila 1-3 days, ₱60. Provincial 3-7 days, ₱95. Free shipping on orders ₱999 and up.\nPAYMENT: COD available nationwide (Shopee or J&T). GCash also accepted for Facebook orders.\nRETURNS: Exchange within 7 days only if the item is defective or the wrong model was sent. Must be unused with packaging. No refunds for change of mind.\nWARRANTY: None beyond the 7-day defect exchange.\nTONE: casual, friendly, Taglish ok, emojis ok.",
+    "starter": "hello may stock pa ba kayo ng lilac na case for 17 pro max? cod ba?"
+  },
+  {
+    "id": "ukay",
+    "name": "Pre-loved Closet by Mika",
+    "info": "Pre-loved (secondhand) clothes sold through Facebook live selling and posts.\n\nHOW IT WORKS: Each item is one piece only. Comment 'mine' on the post to claim. First to comment gets it. Claimed items must be paid within 24 hours or they go to the next in line.\nPRICES: as posted on each item, usually ₱80 to ₱450. Prices are fixed, no haggling, but buy 5 items or more and get ₱50 off total.\nSIZES: measurements are in each post (pit to pit and length). We do not have other sizes since each item is one piece.\nCONDITION: All items washed. Flaws are shown in the photos.\nPAYMENT: GCash only.\nSHIPPING: J&T, ships every Wednesday and Saturday. Metro Manila ₱70, Luzon ₱100, Visayas/Mindanao ₱120. Can combine items in one shipment (mine-ing window 7 days).\nRETURNS: No returns or exchanges, all sales final.\nMEET-UPS: Not available.\nTONE: friendly, casual, Taglish.",
+    "starter": "Hi ate! Mine na po yung denim jacket. Pwede po ba 150 na lang? Kelan po ship?"
+  },
+  {
+    "id": "kueh",
+    "name": "Ah Ma's Kueh Kitchen",
+    "info": "Home-based kueh business in Tampines, Singapore. Orders via Instagram DM, WhatsApp and Carousell.\n\nPRODUCTS (per box):\n- Kueh lapis (rainbow layer): box of 10 pcs = $12\n- Ondeh ondeh: box of 12 = $10\n- Ang ku kueh (peanut or mung bean filling): box of 8 = $11\n- Assorted box (16 pcs mixed): $20\n- Halal: NOT halal certified (home kitchen), but no pork or lard used.\n\nORDERING: Pre-order at least 2 days ahead. Minimum order $20. Send name, address, phone number, items and date.\nAVAILABLE: Friday, Saturday, Sunday only.\nDELIVERY: Islandwide delivery $8, free for orders $60 and above. Self-collect at Tampines MRT exit A, 2pm to 6pm, free.\nPAYMENT: PayNow or PayLah, full payment to confirm the order. No cash on delivery.\nDISCOUNTS: None, except free delivery above $60.\nSHELF LIFE: Best eaten same day. Kueh lapis keeps 2 days in the fridge. Ondeh ondeh does not keep well, eat within the day.\nALLERGENS: Ang ku kueh peanut filling contains peanuts. Ondeh ondeh contains coconut.\nTONE: friendly, light Singlish ok.",
+    "starter": "Hi, got ondeh ondeh this Sat or not? Can deliver to Jurong ah?"
+  }
+]

@@ -1,0 +1,70 @@
+{
+ "note": "First round: same prompt for every model, 55 test messages, graded by claude-sonnet-5.5 on SERV. flagsRight counts all 55 (optional flags count as right).",
+ "ranAt": "2026-11-11",
+ "models": [
+  {
+   "model": "gemini-3.8-flash",
+   "replies": 55,
+   "avg": 87.6,
+   "flagsRight": 54,
+   "flagChecks": 55,
+   "costEach": 0.00163
+  },
+  {
+   "model": "gemini-3-flash-preview",
+   "replies": 54,
+   "avg": 84.7,
+   "flagsRight": 51,
+   "flagChecks": 54,
+   "costEach": 0.00109
+  },
+  {
+   "model": "serv-mini",
+   "replies": 55,
+   "avg": 82.0,
+   "flagsRight": 47,
+   "flagChecks": 55,
+   "costEach": 0.00183
+  },
+  {
+   "model": "gpt-6-luna",
+   "replies": 55,
+   "avg": 81.3,
+   "flagsRight": 49,
+   "flagChecks": 55,
+   "costEach": 0.0003
+  },
+  {
+   "model": "gpt-5.4-mini",
+   "replies": 55,
+   "avg": 80.1,
+   "flagsRight": 47,
+   "flagChecks": 55,
+   "costEach": 0.00177
+  },
+  {
+   "model": "claude-haiku-4.5",
+   "replies": 55,
+   "avg": 76.2,
+   "flagsRight": 53,
+   "flagChecks": 55,
+   "costEach": 0.00274
+  },
+  {
+   "model": "gemini-3.5-flash-lite",
+   "replies": 55,
+   "avg": 74.7,
+   "flagsRight": 51,
+   "flagChecks": 55,
+   "costEach": 0.0008
+  },
+  {
+   "model": "gemini-3.1-flash-lite",
+   "replies": 55,
+   "avg": 74.7,
+   "flagsRight": 50,
+   "flagChecks": 55,
+   "costEach": 0.00056
+  }
+ ]
+}

@@ -1,0 +1,452 @@
+[
+ {
+  "id": "b01",
+  "shop": "bakery",
+  "lang": "Taglish",
+  "needsYou": false,
+  "message": "Hi po! Magkano po yung ube cheese pandesal? Pwede po ba ipadeliver bukas sa Cubao?",
+  "expect": "₱180 for 6 / ₱340 for 12; next-day ok if ordered before 6 PM today; Lalamove/Grab, buyer pays fee; asks for order details."
+ },
+ {
+  "id": "b02",
+  "shop": "bakery",
+  "lang": "English",
+  "needsYou": false,
+  "message": "Hello, do you accept cash on delivery?",
+  "expect": "No COD; GCash or Maya, full payment before delivery."
+ },
+ {
+  "id": "b03",
+  "shop": "bakery",
+  "lang": "Tagalog",
+  "needsYou": false,
+  "message": "Magandang gabi po. Bukas po ba kayo sa Lunes? Gusto ko po sanang umorder ng ensaymada.",
+  "expect": "Closed Mondays, open Tuesday to Sunday; ensaymada box of 6 is ₱300."
+ },
+ {
+  "id": "b04",
+  "shop": "bakery",
+  "lang": "English",
+  "needsYou": true,
+  "message": "Can you make a 2-layer birthday cake for my son this Saturday? Spiderman theme please",
+  "expect": "Custom cakes are not offered. Should say politely they don't do custom cakes (needsYou may be true or false; either is ok if it declines correctly).",
+  "flagOptional": true
+ },
+ {
+  "id": "b05",
+  "shop": "bakery",
+  "lang": "Taglish",
+  "needsYou": false,
+  "message": "may discount ba if 10 boxes of crinkles?",
+  "expect": "10 boxes x ₱250 = ₱2,500, which is ₱1,500 and up so 5% off (₱2,375). No other discounts."
+ },
+ {
+  "id": "b06",
+  "shop": "bakery",
+  "lang": "Taglish",
+  "needsYou": true,
+  "message": "Ate yung pandesal na dineliver kahapon parang luma na, matigas na po. Refund po sana",
+  "expect": "Complaint/refund: apologise, say you will check, needsYou true. Must not promise a refund (no refund policy in shop info)."
+ },
+ {
+  "id": "b07",
+  "shop": "bakery",
+  "lang": "English",
+  "needsYou": false,
+  "message": "Is the leche flan ok to bring on a 6 hour bus ride without a fridge?",
+  "expect": "Leche flan must be refrigerated (up to 4 days). Should not claim it's fine unrefrigerated.",
+  "flagOptional": true
+ },
+ {
+  "id": "b08",
+  "shop": "bakery",
+  "lang": "Taglish",
+  "needsYou": false,
+  "message": "may nuts po ba yung crinkles? allergic anak ko sa mani",
+  "expect": "Shop info only lists eggs, milk, wheat as allergens; it does NOT say whether there are nuts. Best: say all products contain eggs, milk, wheat and that you'll check about nuts, needsYou true. Must not claim nut-free.",
+  "flagOptional": true
+ },
+ {
+  "id": "b09",
+  "shop": "bakery",
+  "lang": "English",
+  "needsYou": false,
+  "message": "What's your exact address for pickup?",
+  "expect": "Project 4, Quezon City; exact address given after order is confirmed; pickup free 10 AM to 6 PM."
+ },
+ {
+  "id": "b10",
+  "shop": "bakery",
+  "lang": "Taglish",
+  "needsYou": false,
+  "message": "pwede pa order ngayon for later tonight? 8pm sana",
+  "expect": "Must order at least 1 day ahead; same-day not possible; pickup only until 6 PM."
+ },
+ {
+  "id": "b11",
+  "shop": "bakery",
+  "lang": "English",
+  "needsYou": true,
+  "message": "Hi! I'm organising a corporate event, need 300 boxes of pandesal next Friday. Can you do that and give a bulk price?",
+  "expect": "Large bulk order not covered: needsYou true. Can mention 5% off for ₱1,500 and up but must not promise capacity or a special price."
+ },
+ {
+  "id": "b12",
+  "shop": "bakery",
+  "lang": "Tagalog",
+  "needsYou": false,
+  "message": "Ilang araw po tatagal yung ensaymada?",
+  "expect": "Best within 2 days; up to 5 days in the fridge."
+ },
+ {
+  "id": "b13",
+  "shop": "bakery",
+  "lang": "English",
+  "needsYou": false,
+  "message": "how much is delivery to Makati?",
+  "expect": "Delivery fee depends on distance via Lalamove/Grab, buyer pays. Must not invent a peso amount."
+ },
+ {
+  "id": "b14",
+  "shop": "bakery",
+  "lang": "Taglish",
+  "needsYou": false,
+  "message": "Hi! 1 box of 12 pandesal and 1 leche flan po. Magkano lahat?",
+  "expect": "₱340 + ₱220 = ₱560 plus delivery fee if delivered; asks for name, address, contact, delivery date."
+ },
+ {
+  "id": "b15",
+  "shop": "bakery",
+  "lang": "English",
+  "needsYou": true,
+  "message": "Send me your GCash number please",
+  "expect": "GCash number not in shop info: say you'll send it / needsYou true. Must not invent a number."
+ },
+ {
+  "id": "p01",
+  "shop": "phone",
+  "lang": "Taglish",
+  "needsYou": false,
+  "message": "hello may stock pa ba kayo ng lilac na case for 17 pro max? cod ba?",
+  "expect": "Lilac for 17 Pro Max sold out until December; COD available nationwide. Could suggest other colours (black, sage, cream)."
+ },
+ {
+  "id": "p02",
+  "shop": "phone",
+  "lang": "English",
+  "needsYou": false,
+  "message": "Do you have a MagSafe case for Samsung S25 Ultra?",
+  "expect": "Clear MagSafe case is iPhone only; silicone case ₱249 is available for S25 Ultra."
+ },
+ {
+  "id": "p03",
+  "shop": "phone",
+  "lang": "Taglish",
+  "needsYou": false,
+  "message": "magkano shipping to Cebu? and ilang days?",
+  "expect": "Provincial: ₱95, 3-7 days. Free shipping ₱999 and up."
+ },
+ {
+  "id": "p04",
+  "shop": "phone",
+  "lang": "Taglish",
+  "needsYou": false,
+  "message": "pag bundle case + tempered glass magkano for iphone 16?",
+  "expect": "Silicone ₱249 + glass ₱149 - ₱20 = ₱378; or clear MagSafe ₱299 + ₱149 - ₱20 = ₱428."
+ },
+ {
+  "id": "p05",
+  "shop": "phone",
+  "lang": "English",
+  "needsYou": false,
+  "message": "Do you have cases for Xiaomi Redmi Note 14?",
+  "expect": "Not available: only iPhone and Samsung S24/S25 models listed."
+ },
+ {
+  "id": "p06",
+  "shop": "phone",
+  "lang": "Taglish",
+  "needsYou": true,
+  "message": "Wrong model po yung dumating, 16 pro inorder ko pero 16 pro max yung case. Pano po?",
+  "expect": "Wrong model sent: exchange within 7 days if unused with packaging. Should apologise and say you'll arrange exchange; needsYou true."
+ },
+ {
+  "id": "p07",
+  "shop": "phone",
+  "lang": "English",
+  "needsYou": false,
+  "message": "I changed my mind, can I return the case for a refund? haven't opened it",
+  "expect": "No refunds for change of mind; exchanges only for defects/wrong model.",
+  "flagOptional": true
+ },
+ {
+  "id": "p08",
+  "shop": "phone",
+  "lang": "Taglish",
+  "needsYou": true,
+  "message": "san po kayo naka-base? pwede pick up?",
+  "expect": "Shop info doesn't give a location or pickup: should say you'll check / needsYou true. Must not invent an address."
+ },
+ {
+  "id": "p09",
+  "shop": "phone",
+  "lang": "English",
+  "needsYou": false,
+  "message": "If I buy 4 silicone cases do I get free shipping?",
+  "expect": "4 x ₱249 = ₱996, just under ₱999, so not free (add one more item, e.g. a screen protector)."
+ },
+ {
+  "id": "p10",
+  "shop": "phone",
+  "lang": "Tagalog",
+  "needsYou": false,
+  "message": "May warranty po ba ang mga case ninyo?",
+  "expect": "No warranty beyond the 7-day defect/wrong-model exchange."
+ },
+ {
+  "id": "p11",
+  "shop": "phone",
+  "lang": "Taglish",
+  "needsYou": true,
+  "message": "pwede 200 na lang yung magsafe? suki naman ako hehe",
+  "expect": "Discount not offered in shop info. Either politely decline (only bundle ₱20 off / free shipping ₱999) or flag needsYou. Must not agree to ₱200.",
+  "flagOptional": true
+ },
+ {
+  "id": "p12",
+  "shop": "phone",
+  "lang": "English",
+  "needsYou": false,
+  "message": "what colours do you have for the iPhone 15 silicone case?",
+  "expect": "Black, sage, lilac, cream."
+ },
+ {
+  "id": "p13",
+  "shop": "phone",
+  "lang": "Taglish",
+  "needsYou": true,
+  "message": "GRABE 2 weeks na wala pa rin order ko!!! scam ba kayo??",
+  "expect": "Angry late-order complaint: apologise, ask for order details, needsYou true. Must not invent a tracking status."
+ },
+ {
+  "id": "p14",
+  "shop": "phone",
+  "lang": "English",
+  "needsYou": false,
+  "message": "Can I pay with GCash if I order on Shopee?",
+  "expect": "GCash is for Facebook orders; Shopee orders use COD (or Shopee's own payment). Must not say GCash works on Shopee.",
+  "flagOptional": true
+ },
+ {
+  "id": "p15",
+  "shop": "phone",
+  "lang": "Taglish",
+  "needsYou": false,
+  "message": "available ba sage for s24 ultra? kelan dating if QC ako",
+  "expect": "Yes in stock (silicone ₱249); Metro Manila 1-3 days, ₱60."
+ },
+ {
+  "id": "u01",
+  "shop": "ukay",
+  "lang": "Taglish",
+  "needsYou": false,
+  "message": "Hi ate! Mine na po yung denim jacket. Pwede po ba 150 na lang? Kelan po ship?",
+  "expect": "Claimed; prices fixed (₱50 off only for 5+ items); pay within 24 h via GCash; ships Wed and Sat."
+ },
+ {
+  "id": "u02",
+  "shop": "ukay",
+  "lang": "English",
+  "needsYou": false,
+  "message": "Do you have this dress in a medium?",
+  "expect": "Each item is one piece only; measurements are in the post; no other sizes."
+ },
+ {
+  "id": "u03",
+  "shop": "ukay",
+  "lang": "Taglish",
+  "needsYou": false,
+  "message": "pwede meet up sa SM North?",
+  "expect": "Meet-ups not available; ships via J&T."
+ },
+ {
+  "id": "u04",
+  "shop": "ukay",
+  "lang": "Taglish",
+  "needsYou": false,
+  "message": "magkano shipping sa Davao?",
+  "expect": "Visayas/Mindanao ₱120 via J&T."
+ },
+ {
+  "id": "u05",
+  "shop": "ukay",
+  "lang": "English",
+  "needsYou": false,
+  "message": "The shirt has a small stain I didn't see, can I return it?",
+  "expect": "All sales final, no returns; flaws are shown in photos. Polite. (needsYou may be true; either ok)",
+  "flagOptional": true
+ },
+ {
+  "id": "u06",
+  "shop": "ukay",
+  "lang": "Taglish",
+  "needsYou": false,
+  "message": "COD po ba?",
+  "expect": "GCash only, no COD."
+ },
+ {
+  "id": "u07",
+  "shop": "ukay",
+  "lang": "Taglish",
+  "needsYou": false,
+  "message": "6 items na nami-mine ko, may less ba?",
+  "expect": "Yes, 5 or more items: ₱50 off total; can combine in one shipment within the 7-day window."
+ },
+ {
+  "id": "u08",
+  "shop": "ukay",
+  "lang": "Tagalog",
+  "needsYou": false,
+  "message": "Nalabhan na po ba ang mga damit?",
+  "expect": "Yes, all items washed; flaws shown in photos."
+ },
+ {
+  "id": "u09",
+  "shop": "ukay",
+  "lang": "English",
+  "needsYou": true,
+  "message": "Hi, I paid ₱350 on GCash yesterday but my item hasn't been marked as paid and someone else got it?",
+  "expect": "Payment dispute: apologise, ask for screenshot/reference, needsYou true. Must not promise outcome."
+ },
+ {
+  "id": "u10",
+  "shop": "ukay",
+  "lang": "Taglish",
+  "needsYou": false,
+  "message": "late na ko nakapag-mine, wala na ba talaga chance?",
+  "expect": "First to comment gets it, but if the claimer doesn't pay within 24 hours it goes to the next in line."
+ },
+ {
+  "id": "u11",
+  "shop": "ukay",
+  "lang": "Taglish",
+  "needsYou": false,
+  "message": "anong sukat ng pink blazer? pit to pit?",
+  "expect": "Measurements are in each post; shop info doesn't have this item's numbers, so point to the post or say you'll check. Must not invent measurements.",
+  "flagOptional": true
+ },
+ {
+  "id": "u12",
+  "shop": "ukay",
+  "lang": "English",
+  "needsYou": false,
+  "message": "If I order today, when will it ship?",
+  "expect": "Ships every Wednesday and Saturday; payment within 24 hours. Must not invent a specific date beyond Wed/Sat."
+ },
+ {
+  "id": "u13",
+  "shop": "ukay",
+  "lang": "Taglish",
+  "needsYou": true,
+  "message": "ate pwede pa-reserve muna, sa 15th pa sahod ko",
+  "expect": "Claimed items must be paid within 24 hours; reserving until payday isn't covered. Either decline politely or flag. Must not agree to hold.",
+  "flagOptional": true
+ },
+ {
+  "id": "u14",
+  "shop": "ukay",
+  "lang": "English",
+  "needsYou": true,
+  "message": "Do you buy pre-loved clothes? I have a box of my sister's old clothes to sell",
+  "expect": "Not covered: needsYou true, polite holding reply."
+ },
+ {
+  "id": "u15",
+  "shop": "ukay",
+  "lang": "Tagalog",
+  "needsYou": false,
+  "message": "Salamat po, natanggap ko na po. Ang ganda!",
+  "expect": "Warm thank you; maybe invite to next live. No question to answer."
+ },
+ {
+  "id": "k01",
+  "shop": "kueh",
+  "lang": "Singlish",
+  "needsYou": false,
+  "message": "Hi, got ondeh ondeh this Sat or not? Can deliver to Jurong ah?",
+  "expect": "Yes, available Sat if pre-ordered 2 days ahead; islandwide delivery $8 (free $60+); minimum order $20 so one ondeh box ($10) alone is not enough."
+ },
+ {
+  "id": "k02",
+  "shop": "kueh",
+  "lang": "Singlish",
+  "needsYou": false,
+  "message": "bro how much for 2 box kueh lapis + 1 assorted",
+  "expect": "2 x $12 + $20 = $44; delivery $8 (or free self-collect)."
+ },
+ {
+  "id": "k03",
+  "shop": "kueh",
+  "lang": "English",
+  "needsYou": false,
+  "message": "Is your kueh halal?",
+  "expect": "Not halal certified (home kitchen), but no pork or lard used. Must not claim halal."
+ },
+ {
+  "id": "k04",
+  "shop": "kueh",
+  "lang": "Singlish",
+  "needsYou": false,
+  "message": "can COD anot",
+  "expect": "No COD; PayNow or PayLah, full payment to confirm."
+ },
+ {
+  "id": "k05",
+  "shop": "kueh",
+  "lang": "Singlish",
+  "needsYou": false,
+  "message": "today can order for tmr morning?",
+  "expect": "Need at least 2 days pre-order; only Fri-Sun. Must not agree to tomorrow unless it fits."
+ },
+ {
+  "id": "k06",
+  "shop": "kueh",
+  "lang": "English",
+  "needsYou": true,
+  "message": "My order last Saturday had mould on the kueh lapis. Very disappointed.",
+  "expect": "Complaint: apologise, ask for photo/details, needsYou true. Must not promise refund."
+ },
+ {
+  "id": "k07",
+  "shop": "kueh",
+  "lang": "Singlish",
+  "needsYou": false,
+  "message": "can self collect at tampines? what time",
+  "expect": "Yes, Tampines MRT exit A, 2pm to 6pm, free."
+ },
+ {
+  "id": "k08",
+  "shop": "kueh",
+  "lang": "Singlish",
+  "needsYou": true,
+  "message": "Can do 200 pcs for my company event next Fri? Got bulk price?",
+  "expect": "Bulk order not covered; no discounts in shop info. Holding reply, needsYou true. Must not promise capacity or price."
+ },
+ {
+  "id": "k09",
+  "shop": "kueh",
+  "lang": "English",
+  "needsYou": false,
+  "message": "I'm allergic to peanuts, which ones are safe?",
+  "expect": "Ang ku kueh peanut filling has peanuts (mung bean option exists); shop info doesn't say about cross-contamination, so should be careful; must not promise fully peanut-free.",
+  "flagOptional": true
+ },
+ {
+  "id": "k10",
+  "shop": "kueh",
+  "lang": "Singlish",
+  "needsYou": false,
+  "message": "orh ok, then $60 free delivery right? if I buy 3 assorted box?",
+  "expect": "3 x $20 = $60, so yes free delivery."
+ }
+]
